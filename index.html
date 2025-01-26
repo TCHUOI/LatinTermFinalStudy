@@ -21,48 +21,99 @@ body {
     height: 50px;
     float: left;
 }
+#check {
+    margin-top: 20px;
+    width: 20%;
+    height: 30px;
+    background-color: rgb(201, 224, 207);
+}
 </style>
     </head>
     <body>
 <div class = "conj">
 sum, esse, fuī, futūrus, to be
 <br>
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
+    <input class = "conjinp" id = "i1">
+    <input class = "conjinp" id = "i4">
+    <input class = "conjinp" id = "i2">
+    <input class = "conjinp" id = "i5">
+    <input class = "conjinp" id = "i3">
+    <input class = "conjinp" id = "i6">
 </div>
 <div class = "conj">
 possum, posse, potuī, --, to be able, can
 <br>
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
+    <input class = "conjinp" id = "i7">
+    <input class = "conjinp" id = "i10">
+    <input class = "conjinp" id = "i8">
+    <input class = "conjinp" id = "i11">
+    <input class = "conjinp" id = "i9">
+    <input class = "conjinp" id = "i12">
 </div>
 <div class = "conj">
 volō, velle, voluī, --, to want, wish, be willing
 <br>
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
+    <input class = "conjinp" id = "i13">
+    <input class = "conjinp" id = "i16">
+    <input class = "conjinp" id = "i14">
+    <input class = "conjinp" id = "i17">
+    <input class = "conjinp" id = "i15">
+    <input class = "conjinp" id = "i18">
 </div>
 <div class = "conj">
 nōlō, nōlle, noluī, --, to not want, refuse, be unwilling
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
-    <input class = "conjinp">
+<br>
+    <input class = "conjinp" id = "i19">
+    <input class = "conjinp" id = "i22">
+    <input class = "conjinp" id = "i20">
+    <input class = "conjinp" id = "i23">
+    <input class = "conjinp" id = "i21">
+    <input class = "conjinp" id = "i24">
 </div>
-
+<button id = "check" onclick = "checkAns();">Check Answers</button>
+<button id = "check" onclick = "resetAns();">Reset Answers</button>
+<script>
+var ansKey = {
+    "i1": "sum",
+    "i2": "es",
+    "i3": "est",
+    "i4": "sumus",
+    "i5": "estis",
+    "i6": "sunt",
+    "i7": "possum",
+    "i8": "potes",
+    "i9": "potest",
+    "i10": "possumus",
+    "i11": "potestis",
+    "i12": "possunt",
+    "i13": "volo",
+    "i14": "vis",
+    "i15": "vult",
+    "i16": "volumus",
+    "i17": "vultis",
+    "i18": "volunt",
+    "i19": "nolo",
+    "i20": "non vis",
+    "i21": "non vlt",
+    "i22": "nolumus",
+    "i23": "non vultis",
+    "i24": "nolunt",
+}
+function resetAns() {
+    for(var ans in ansKey) {
+        document.getElementById(ans).value = ""
+        document.getElementById(ans).style.backgroundColor = "white"
+    }
+}
+function checkAns() {
+    for(var ans in ansKey) {
+        if(document.getElementById(ans).value === ansKey[ans]) {
+            document.getElementById(ans).style.backgroundColor = "green"
+        } else {
+            document.getElementById(ans).style.backgroundColor = "red"
+        }
+    }
+}
+</script>
     </body>
 </html>
