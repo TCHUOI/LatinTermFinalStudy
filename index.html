@@ -132,6 +132,7 @@ body {
 <br>
 <button id = "check" onclick = "checkAns();">Check Answers</button>
 <button id = "check" onclick = "resetAns();">Reset Answers</button>
+<button id = "check" onclick = "showAns();">Show Answers</button>
 <script>
 var ansKey = {
     "i1": "sum",
@@ -184,6 +185,12 @@ var ansKey = {
 function resetAns() {
     for(var ans in ansKey) {
         document.getElementById(ans).value = ""
+        document.getElementById(ans).style.backgroundColor = "white"
+    }
+}
+function showAns() {
+    for(var ans in ansKey) {
+        document.getElementById(ans).value = ansKey[ans]
         document.getElementById(ans).style.backgroundColor = "white"
     }
 }
