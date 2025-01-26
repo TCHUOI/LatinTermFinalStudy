@@ -21,6 +21,12 @@ body {
     height: 50px;
     float: left;
 }
+.names {
+	margin-top: 10px;
+	width: 50%;
+	height: 30px;
+    margin-right: 50%
+}
 #check {
     margin-top: 20px;
     width: 20%;
@@ -30,6 +36,7 @@ body {
 </style>
     </head>
     <body>
+<h2>Conjugate the verbs</h2>
 <div class = "conj">
 sum, esse, fuī, futūrus, to be
 <br>
@@ -70,6 +77,48 @@ nōlō, nōlle, noluī, --, to not want, refuse, be unwilling
     <input class = "conjinp" id = "i21">
     <input class = "conjinp" id = "i24">
 </div>
+<div class = "conj">
+dūcō, dūcere, dūxī, ductus, to lead, guide
+<br>
+    <input class = "conjinp" id = "i25">
+    <input class = "conjinp" id = "i28">
+    <input class = "conjinp" id = "i26">
+    <input class = "conjinp" id = "i29">
+    <input class = "conjinp" id = "i27">
+    <input class = "conjinp" id = "i30">
+</div>
+<div class = "conj">
+veniō, venire, vēnī, ventus, to come
+<br>
+    <input class = "conjinp" id = "i31">
+    <input class = "conjinp" id = "i34">
+    <input class = "conjinp" id = "i32">
+    <input class = "conjinp" id = "i35">
+    <input class = "conjinp" id = "i33">
+    <input class = "conjinp" id = "i36">
+</div>
+<h2>Name the part of the building</h2>
+the changing room
+<input class = "names" id = "i37">
+system that brings water to the baths
+<input class = "names" id = "i38">
+the hot room with a pool
+<input class = "names" id = "i39">
+the cold room with a plunge pool
+<input class = "names" id = "i40">
+Underfloor heating system
+<input class = "names" id = "i41">
+the hot, dry room
+<input class = "names" id = "i42">
+open space exercise ground
+<input class = "names" id = "i43">
+the pool
+<input class = "names" id = "i44">
+tool used to scrape off dirt and oil
+<input class = "names" id = "i45">
+the warm room with benches
+<input class = "names" id = "i46">
+<br>
 <button id = "check" onclick = "checkAns();">Check Answers</button>
 <button id = "check" onclick = "resetAns();">Reset Answers</button>
 <script>
@@ -98,6 +147,28 @@ var ansKey = {
     "i22": "nolumus",
     "i23": "non vultis",
     "i24": "nolunt",
+    "i25": "duco",
+    "i26": "ducis",
+    "i27": "ducit",
+    "i28": "ducimus",
+    "i29": "ducitis",
+    "i30": "ducunt",
+    "i31": "venio",
+    "i32": "venis",
+    "i33": "venit",
+    "i34": "venimus",
+    "i35": "venitis",
+    "i36": "veniunt",
+    "i37": "apodyterium",
+    "i38": "aqueduct",
+    "i39": "caldarium",
+    "i40": "frigidarium",
+    "i41": "hypocaust",
+    "i42": "laconicum",
+    "i43": "palaestra",
+    "i44": "piscina",
+    "i45": "strigil",
+    "i46": "tepidārium",
 }
 function resetAns() {
     for(var ans in ansKey) {
