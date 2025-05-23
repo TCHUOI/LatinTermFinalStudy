@@ -8,7 +8,7 @@ body {
     background-color: rgb(250, 250, 250);
 }
 .conj {
-    width: 40%;
+    width: 100%;
     margin-left: 3.5%;
     padding: 10px;
     background-color: rgb(200, 200, 200);
@@ -44,28 +44,31 @@ body {
     <body>
 <div class = "bound">
 	<h2>Conjugate the verbs</h2>
-  <div class = "conj">
+<div class = "conj">
   peto, petere, petivi, petitus
   to attack; seek, beg, ask for *use seek
-	  <br>Cong. = 
-<input class = "conjinp" id = "i1">
+	  <br>Cong. =
+<input class = "names" id = "i1">
 	  <br> Pres. Stem = 
-      <input class = "conjinp" id = "i2">
+      <input class = "names" id = "i2">
 	  <br> Perf. Stem = 
-      <input class = "conjinp" id = "i3">
+      <input class = "names" id = "i3">
   <br>
       <input class = "conjinp" id = "i4">
-      <input class = "conjinp" id = "i10">
-      <input class = "conjinp" id = "i5">
       <input class = "conjinp" id = "i11">
-      <input class = "conjinp" id = "i6">
+      <input class = "conjinp" id = "i5">
       <input class = "conjinp" id = "i12">
-      <input class = "conjinp" id = "i7">
+      <input class = "conjinp" id = "i6">
       <input class = "conjinp" id = "i13">
-      <input class = "conjinp" id = "i8">
+      <input class = "conjinp" id = "i7">
       <input class = "conjinp" id = "i14">
-      <input class = "conjinp" id = "i9">
+      <input class = "conjinp" id = "i8">
       <input class = "conjinp" id = "i15">
+      <input class = "conjinp" id = "i9">
+      <input class = "conjinp" id = "i16">
+      <input class = "conjinp" id = "i10">
+      <input class = "conjinp" id = "i17">
+  </div>
   </div>
   
 <br>
@@ -74,10 +77,10 @@ body {
 <button id = "check" onclick = "showAns();">Show Answers</button>
 <script>
 var ansKey = {
-    "i1": "3rd,
+    "i1": "3rd",
     "i2": "pet",
     "i3": "petiv",
-    "i4": "petimus,
+    "i4": "petimus",
     "i5": "petebamus",
     "i6": "petemus",
     "i7": "petivimus",
@@ -89,9 +92,12 @@ var ansKey = {
     "i13": "we will seek",
     "i14": "we sought",
     "i15": "we had sought",
-    "i14": "we will have sought",
-    "i15": "to seek",
+    "i14": "we sought",
+    "i15": "we had sought",
+    "i16": "we will have sought",
+    "i17": "to seek",
 }
+
 function resetAns() {
     for(var ans in ansKey) {
         document.getElementById(ans).value = ""
